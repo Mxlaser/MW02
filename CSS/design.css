@@ -1,21 +1,21 @@
 body[data-theme="light"]{
-  --hf-bg-color : white;
-  --hf-text-color : black;
-  --n-bg-color : white;
-  --n-text-color : black;
+  --hf-bg-color : #2874a6;
+  --hf-text-color : white;
+  --n-bg-color : #2874a6;
+  --n-text-color : white;
   --sa-title-color : black;
   --sa-text-color : black;
   --sa-bg-color : white;
 }
 
 body[data-theme="dark"]{
-  --hf-bg-color : black;
+  --hf-bg-color : #262626;
   --hf-text-color : white;
-  --n-bg-color : black;
+  --n-bg-color : #262626;
   --n-text-color : white;
   --sa-title-color : white;
   --sa-text-color : white;
-  --sa-bg-color : black;
+  --sa-bg-color : #333333;
 }
 
 /* Modification du body */
@@ -24,13 +24,9 @@ body {
   height: auto;
 }
 
-/* Modification du header */
-header, nav, footer {
-  color: white;
-}
-
-header footer {
+header, footer {
   background-color: var(--hf-bg-color);
+  color: var(--hf-text-color);
 }
 
 header h1 {
@@ -46,11 +42,12 @@ header h1 {
 nav {
   padding: 0 20px 0 20px;
   background-color: var(--n-bg-color);
+  color: var(--n-text-color);
 }
 
 nav a {
   font-size: 1rem;
-  color: white;
+  color: var(--n-text-color);
   padding: 0 20px 0 20px;
   text-align: center;
   font-variant: small-caps;
@@ -83,17 +80,28 @@ section img {
   width: 350px;
 }
 
+section, aside {
+  background-color: var(--sa-bg-color);
+  color: var(--sa-text-color);
+}
+
 /* Modification du aside */
 aside {
-  margin: 10px 0 10px 10px;
-  padding: 10px;
-  border: 1px solid #2874a6;
-  border-radius: 10px;
+  border-width: 3px;
+  border-style: solid;
+  border-image:
+    linear-gradient(
+      to bottom,
+      white,
+      #2874a6,
+      white
+    ) 1 100%;
+    padding: 10px;
 }
 
 aside a {
   font-size: 1rem;
-  color: black;
+  color: var(--sa-text-color);
   font-weight: bold;
   text-decoration: underline;
 }
@@ -108,7 +116,7 @@ footer div {
 
 footer a {
   font-size: 1rem;
-  color: white;
+  color: var(--hf-text-color);
   text-align: center;
   font-variant: small-caps;
   text-decoration: none;
