@@ -1,0 +1,45 @@
+/*Modification du body*/
+body {
+  /*border: 10px solid #E0E0E0;
+  border-radius: 20px;*/
+  padding: 10px;
+  width: 180px;
+}
+
+label, input {
+  margin: 5px 0 5px 0;
+}
+
+h2 {
+  color: #2874a6;
+}
+
+/* Modification de l'input valider */
+#valider {
+  background-color: #2874a6;
+  padding: 0 66px 0 66px;
+  color: white;
+}
+
+/* Modification de l'input date */
+#date {
+  padding: 0 15px 0 15px;
+}
+
+/* Création d'un footer pour le lien de retour */
+footer {
+  padding: 20px;
+}
+
+footer a {
+  font-size: 1rem;
+  color: black;
+  text-align: center;
+  font-variant: small-caps;
+  text-decoration: none;
+}
+
+footer a:hover {
+  border-bottom: 2px solid black;
+  transition-delay: 0.2s;
+}

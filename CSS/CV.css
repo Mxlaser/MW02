@@ -1,0 +1,173 @@
+body {
+  /* Pour afficher les bordures */
+  /*border: 10px solid #2874a6;
+  border-radius: 20px; */
+  margin: 0 20% 0 20%;
+  height: auto;
+}
+
+/* Titres principaux */
+h1 {
+  margin: 20px;
+  border: 5px solid #800000;
+  color:blue;
+  font-style: italic;
+  text-align: center;
+  font-size: 3em
+}
+
+h2 {
+  margin: 20px;
+  padding: 5px;
+  border: 5px solid #800000;
+  border-radius: 10px;
+  color: blue;
+  width: auto;
+}
+
+ /* Titre h2 modifié */
+#mesCompetences {
+  width: auto;
+}
+
+/* Présentation en haut de la page */
+div.presentation {
+  padding-bottom: 25px;
+}
+
+#maPhoto {
+  float: right;
+  height: 75px;
+  width: 75px;
+  margin-right: 20px;
+}
+
+div.presentation h4 {
+  color: #336699;
+  margin-left: 20px;
+}
+
+div.icones img {
+  float: left;
+  height: 15px;
+  width: 15px;
+}
+
+div.presentation p {
+  font-style: italic;
+  margin-left: 25px;
+}
+
+div.grille {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  grid-template-areas : "gauche droite";
+}
+
+#gridArea1 {
+  grid-area: gauche;
+}
+
+#gridArea2 {
+  grid-area: droite;
+}
+
+/* Tableaux */
+table, th, td {
+  margin-left: 20px;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+ th, td {
+   padding: 4px;
+ }
+
+ tr:nth-child(even) {
+  background-color: #D6EEEE;
+}
+
+#table1 {
+  width: auto;
+}
+
+#table2 {
+  width: auto;
+  margin: 20px;
+}
+
+/* Couleurs des langages HTML */
+ #html {
+   color: #0044cc;
+   text-align: center;
+ }
+
+ #css {
+   color: #29a329;
+   text-align: center;
+ }
+
+ #javaScript {
+   color: #cccc00;
+   text-align: center;
+ }
+
+ #php {
+   color: #cc2900;
+   text-align: center;
+ }
+
+ #baseDeDonnee {
+   text-align: center;
+ }
+
+ #lamp {
+   text-align: center;
+ }
+
+ div.centrerTableau td {
+   text-align: center;
+ }
+
+ .date {
+   font-weight: bold;
+   color: #800080;
+ }
+
+ #loisirs li {
+   display: inline;
+
+ }
+
+footer {
+  margin: 0 20px 20px 20px;
+  border: 5px solid #800000;
+  border-radius: 10px;
+  padding: 0 0 20px 18px;
+  font-size: 3em;
+  width: 10%;
+}
+
+ footer a {
+   font-size: 1rem;
+   color: black;
+   text-align: center;
+   font-variant: small-caps;
+   text-decoration: none;
+ }
+
+ footer a:hover {
+   border-bottom: 2px solid black;
+   transition-delay: 0.2s;
+ }
+
+ @media (max-width: 800px) {   /*Zone réservée pour les écrans inférieurs à 800px de large*/
+   div.grille {
+     display: grid;
+     grid-template-columns: 100%;
+     grid-template-rows: auto auto;
+     grid-template-areas: "gauche"
+                          "droite";
+   }
+ }

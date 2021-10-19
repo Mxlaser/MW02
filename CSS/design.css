@@ -1,0 +1,139 @@
+body[data-theme="light"]{
+  --hf-bg-color : white;
+  --hf-text-color : black;
+  --n-bg-color : white;
+  --n-text-color : black;
+  --sa-title-color : black;
+  --sa-text-color : black;
+  --sa-bg-color : white;
+}
+
+body[data-theme="dark"]{
+  --hf-bg-color : black;
+  --hf-text-color : white;
+  --n-bg-color : black;
+  --n-text-color : white;
+  --sa-title-color : white;
+  --sa-text-color : white;
+  --sa-bg-color : black;
+}
+
+/* Modification du body */
+body {
+  font-family: 'Quicksand', sans-serif;
+  height: auto;
+}
+
+/* Modification du header */
+header, nav, footer {
+  color: white;
+}
+
+header footer {
+  background-color: var(--hf-bg-color);
+}
+
+header h1 {
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+  padding-top: 0px;
+  font-size: 1.5rem;
+  font-variant: small-caps;
+  text-align: center;
+}
+
+/* Modification de la barre de nav */
+nav {
+  padding: 0 20px 0 20px;
+  background-color: var(--n-bg-color);
+}
+
+nav a {
+  font-size: 1rem;
+  color: white;
+  padding: 0 20px 0 20px;
+  text-align: center;
+  font-variant: small-caps;
+  text-decoration: none;
+}
+
+nav a:hover {
+  border-bottom: 2px solid white;
+  transition-delay: 0.2s;
+}
+
+/* Modification de la section */
+section h1 {
+  text-align: center;
+  padding: 10px 0 0 0;
+  font-variant: small-caps;
+}
+
+section table {
+  text-align: center;
+}
+
+section th {
+  padding: 0 20px 0 20px;
+}
+
+section img {
+  float: left;
+  padding: 0 10px 0 0;
+  width: 350px;
+}
+
+/* Modification du aside */
+aside {
+  margin: 10px 0 10px 10px;
+  padding: 10px;
+  border: 1px solid #2874a6;
+  border-radius: 10px;
+}
+
+aside a {
+  font-size: 1rem;
+  color: black;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Modification du footer */
+footer div {
+  display: grid;
+  grid-template-columns: 1fr 33% 33%;
+  width: 100%;
+  padding-left: 10px;
+}
+
+footer a {
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+  font-variant: small-caps;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+footer a:hover {
+  border-bottom: 2px solid white;
+  transition-delay: 0.2s;
+}
+
+@media (max-width: 800px) {
+  section img {
+    width: 100%;
+  }
+
+  nav div {
+    text-align: left;
+    padding: 30px 0 30px 0;
+    font-size: 30px;
+  }
+
+  nav a {
+    font-size: 30px;
+    font-variant: small-caps;
+    text-decoration: none;
+  }
+}
