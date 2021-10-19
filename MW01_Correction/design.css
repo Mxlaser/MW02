@@ -1,0 +1,198 @@
+
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+header, footer {
+    background-color: #2874a6;
+    color: white;
+}
+
+header h1 {
+    margin: 10px 0;
+    padding: 0;
+    font-size: 40px;
+	font-variant-caps: small-caps; 
+    text-align: center;
+}
+
+header img {
+    display: none;
+}
+
+@media screen and (orientation: portrait) {
+    header img {
+        display: block;
+        float: right;
+        margin: 10px;
+        height: 50px;
+        padding: 0;
+    }
+}
+
+/************** La barre de navigation NAV ******************/
+nav {
+    padding: 0 20px;
+    background-color: #2874a6;
+    color: white;
+    /* font-size: 1rem; */
+}
+nav div {
+    text-align: center;
+}
+nav a {
+    font-size: 20px;
+    color: white;
+    margin: 0px 0px;
+    padding: 0 10px;
+	font-variant-caps: small-caps; 
+    text-decoration: none;
+}
+
+
+nav div:hover {
+    /* text-decoration: underline; */
+    border-bottom: 2px solid white;
+    transition-duration: 0.3s;
+}
+
+/*    La section principale */
+section, aside {
+    background-color: white;
+    color: black;
+    padding: 10px;
+}
+
+
+section h1, aside h1 {
+    color: #2874a6;
+}
+
+section h2, aside h2 {
+    color: #2874a6;
+    padding-left: 30px;
+    text-align: center;
+    margin: 50px 0;
+    font-size: 35px;
+    font-weight: lighter;
+    font-variant-caps: small-caps; 
+
+}
+
+
+section img#imgdronetello {
+    /*margin: 5px 30px;*/
+    width: 100%;
+}
+
+section img#imgdronemavic {
+    /*float: left;*/
+    width: 30%;
+}
+
+@media screen and (orientation: portrait) {
+    section img#imgdronetello, section img#imgdronemavic {
+        float: none;
+        margin: 0;
+        width: 100%;
+    }
+
+}
+
+/* GEstion de l'affichage en 2 colonnes dans la section principale : une image à gauche et un texte à droite*/
+
+section div.deux_colonnes {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+@media screen and (orientation: portrait) {
+    section div.deux_colonnes {
+        display: grid;
+        grid-template-columns: 1fr;
+    }    
+}
+
+section div.colonne_texte {
+    margin: 10px 30px;
+}
+
+
+
+
+section div.quatre_colonnes {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+@media screen and (orientation: portrait) {
+    section div.quatre_colonnes {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }    
+}
+
+section div.quatre_colonnes p {
+    text-align: center;
+    font-size: 22px;
+    font-weight: normal;
+}
+
+section div.quatre_colonnes span.evidence {
+    font-size: 26px;
+    color: #2874a6;
+    font-weight: lighter;
+    font-variant-caps: small-caps; 
+
+}
+
+/****** Le aside ASIDE *******/
+aside {
+    /* margin: 10px 0px 10px 10px; */
+    border-width: 3px;
+    border-style: solid;
+    border-image: 
+      linear-gradient(
+        to bottom, 
+        white,
+        #2874a6, 
+        white
+      ) 1 100%;
+    /* border-left: 0.05em solid linear-gradient(white, #2874a6, white); */
+    /* border-radius: 10px; */
+}
+
+/************* Le pied de page FOOTER *******************/
+footer div {
+    margin: 5px 0 0 30px;
+    padding: 0;
+}
+
+
+
+footer h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-weight: 400;
+	font-variant-caps: small-caps; 
+    color: white;
+}
+footer p {
+    margin: 0;
+    padding:0;
+    font-size: 0.8;
+    font-weight: 100;
+    color: white;
+}
+
+footer a {
+    display: block;
+    margin: 5px;
+    padding:0;
+    font-size: 20px;
+    font-weight: 100;
+    color: white;
+    text-decoration: none;
+}
+
+
