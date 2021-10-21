@@ -2,7 +2,6 @@ let hamburger = document.getElementById("hamburger");
 hamburger.addEventListener('click', afficherMasquerBarreNavigation);
 function afficherMasquerBarreNavigation()
 {
-  //console.log("Click sur hamburger");
   let maBarreNav = document.getElementById("barre_navigation");
   if(maBarreNav.style.display == "grid")
   {

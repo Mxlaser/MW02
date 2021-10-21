@@ -1,22 +1,56 @@
+body[data-theme="light"]{
+  --hf-bg-color : #2874a6;
+  --hf-text-color : white;
+  --n-bg-color : #2874a6;
+  --n-text-color : white;
+  --sa-title-color : black;
+  --sa-text-color : black;
+  --sa-bg-color : white;
+}
+
+body[data-theme="dark"]{
+  --hf-bg-color : #262626;
+  --hf-text-color : white;
+  --n-bg-color : #262626;
+  --n-text-color : white;
+  --sa-title-color : white;
+  --sa-text-color : white;
+  --sa-bg-color : #333333;
+}
+
 /*Modification du body*/
 body {
   /*border: 10px solid #E0E0E0;
   border-radius: 20px;*/
   padding: 10px;
   width: 180px;
+  background-color: var(--sa-bg-color)
 }
 
 label, input {
   margin: 5px 0 5px 0;
+  color : var(--sa-text-color);
 }
 
 h2 {
-  color: #2874a6;
+  color: var(--sa-title-color);
+}
+
+p {
+  color: var(--sa-text-color);
+}
+
+.rouge {
+  color: red;
+}
+
+.vert {
+    color: green;
 }
 
 /* Modification de l'input valider */
 #valider {
-  background-color: #2874a6;
+  background-color: var(--n-bg-color);
   padding: 0 66px 0 66px;
   color: white;
 }
@@ -24,6 +58,7 @@ h2 {
 /* Modification de l'input date */
 #date {
   padding: 0 15px 0 15px;
+  color: -internal-light-dark(var(--sa-text-color), white);
 }
 
 /* Création d'un footer pour le lien de retour */
@@ -33,13 +68,13 @@ footer {
 
 footer a {
   font-size: 1rem;
-  color: black;
+  color: var(--sa-text-color);
   text-align: center;
   font-variant: small-caps;
   text-decoration: none;
 }
 
 footer a:hover {
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid var(--sa-text-color);
   transition-delay: 0.2s;
 }

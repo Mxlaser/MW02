@@ -17,19 +17,17 @@ function appuiButton()
   }
 }
 
-const d = new Date();
-const hour = d.getHours();
+//Fonction mode sombre en fonction de l'heure de la journée
+let date = new Date();
+let heure = date.getHours();
 
-function darkLight()
+if((heure > 7) && (heure < 19))
 {
-  if(hour > 7 || hour < 19)
-  {
-    monBody.setAttribute("data-theme","dark");
-    darklight.innerText="Mode clair";
-  }
-  else
-  {
-    monBody.setAttribute("data-theme","light");
-    darklight.innerText="Mode sombre";
-  }
+  monBody.setAttribute("data-theme","light");
+  darklight.innerText="Mode sombre";
+}
+else
+{
+  monBody.setAttribute("data-theme","dark");
+  darklight.innerText="Mode clair";
 }
