@@ -1,7 +1,28 @@
-/* Modification du body */
+/* Attribution des zones */
+header {
+  grid-area: head;
+}
+
+nav {
+  grid-area: nav;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+}
+
+section {
+  grid-area: section;
+}
+
+aside {
+  grid-area: aside;
+}
+
+footer {
+  grid-area: foot;
+}
+
+/*---Body---*/
 body {
-  /*border: 10px solid #E0E0E0;
-  border-radius: 20px;*/
   margin: 0 20px 0 20px;
   height: auto;
   display: grid;
@@ -13,31 +34,19 @@ body {
   grid-template-columns: 1fr 25%;
 }
 
-/* Attribution des zones */
-header {
-	grid-area: head;
-}
-
-header img {
-  display: none;
-}
-
 nav {
-	grid-area: nav;
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-}
-
-section {
-  grid-area: section;
-}
-
-aside {
-	grid-area: aside;
+	display: grid;
+	grid-template-columns: repeat(4, 130px);
+	grid-template-rows: auto;
+	align-items: center;
+	column-gap: 50px;
 }
 
 footer {
-	grid-area: foot;
+	padding: 5px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 50px;
 }
 
 /* Zone réservée pour les écrans inférieurs à 800px de large */
@@ -61,10 +70,11 @@ footer {
     grid-template-rows: repeat(4,1fr);
   }
 
-  header img {
-    display: block;
-    float : right;
-    margin: 10px;
-    height: 50px;
-  }
+  footer {
+		padding: 5px;
+		display: grid;
+		grid-template-columns: 1fr;
+		column-gap: 50px;
+		grid-template-rows: repeat(3,auto);
+	}
 }

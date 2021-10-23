@@ -1,5 +1,9 @@
-let hamburger = document.getElementById("hamburger");
-hamburger.addEventListener('click', afficherMasquerBarreNavigation);
+//Début première fonction-------------------------------------------------------
+
+//---Variable affectée au hamburger qui déclenche une fonction lors d'un clic
+let hamburger = document.getElementById("hamburger").addEventListener("click", afficherMasquerBarreNavigation);
+
+//---Fonction qui affiche le nav
 function afficherMasquerBarreNavigation()
 {
   let maBarreNav = document.getElementById("barre_navigation");
@@ -12,3 +16,5 @@ function afficherMasquerBarreNavigation()
     maBarreNav.style.display = "grid";
   }
 }
+
+//Fin première fonction---------------------------------------------------------
