@@ -21,7 +21,7 @@ body[data-theme="dark"]{
 /*---Body---*/
 body {
   font-family: 'Quicksand', sans-serif;
-  width: 1fr;
+  margin: 0;
 }
 
 /*---Header---*/
