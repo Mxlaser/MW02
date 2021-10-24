@@ -172,6 +172,15 @@ aside a {
   text-decoration: underline;
 }
 
+#compteurJours, #compteurHeures, #compteurMinutes, #compteurSecondes {
+  display: inline-grid;
+  padding: 12px 20px;
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: var(--n-bg-color);
+  color: white;
+}
+
 /*---Footer---*/
 footer div {
   margin: 5px 0 0 30px;

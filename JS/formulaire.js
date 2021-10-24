@@ -13,6 +13,15 @@ function VerifierFormulaireInscription()
     alert("Les mots de passes sont différents");
     event.preventDefault();
   }
+  else if(VerifierMotDePasse == true)
+  {
+    console.debug("mdp bon");
+  }
+  else if(VerifierMotDePasse == false)
+  {
+      alert("La securité du mot de passe n'est pas respectée");
+      event.preventDefault();
+  }
 }
 
 //Fin première fonction---------------------------------------------------------
@@ -122,6 +131,16 @@ function VerifierMotDePasse()
   {
     document.getElementById("mdp_minuscule").classList.remove("vert");
     document.getElementById("mdp_minuscule").classList.add("rouge");
+  }
+
+  //---Renvoi true si mdp bon false sinon
+  if ((mdp.length >= 8) && (nbChiffres >=1) && (nbCarSpe >= 1) && (nbMajuscules >= 1) && (nbMinuscules >= 1))
+  {
+    VerifierMotDePasse = true;
+  }
+  else
+  {
+    VerifierMotDePasse = false;
   }
 }
 
