@@ -3,7 +3,7 @@ body[data-theme="light"]{
   --hf-text-color : white;
   --n-bg-color : #2874a6;
   --n-text-color : white;
-  --sa-title-color : black;
+  --sa-title-color : #2874a6;
   --sa-text-color : black;
   --sa-bg-color : white;
 }
@@ -207,7 +207,7 @@ footer a {
 }
 
 footer a:hover {
-  border-bottom: 2px solid var(--sa-text-color);
+  border-bottom: 2px solid var(--hf-text-color);
   transition-duration: 0.3s;
 }
 

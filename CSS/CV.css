@@ -1,19 +1,41 @@
+body[data-theme="light"]{
+  --hf-bg-color : #2874a6;
+  --hf-text-color : white;
+  --n-bg-color : #2874a6;
+  --n-text-color : white;
+  --sa-title-color : #2874a6;
+  --sa-text-color : black;
+  --sa-bg-color : white;
+}
+
+body[data-theme="dark"]{
+  --hf-bg-color : #262626;
+  --hf-text-color : white;
+  --n-bg-color : #262626;
+  --n-text-color : white;
+  --sa-title-color : white;
+  --sa-text-color : white;
+  --sa-bg-color : #333333;
+}
+
+/*---Body---*/
 body {
   /* Pour afficher les bordures */
   /*border: 10px solid #2874a6;
   border-radius: 20px; */
   margin: 0 20% 0 20%;
   height: auto;
+  background-color: var(--sa-bg-color);
 }
 
-/* Titres principaux */
-h1 {
+/*---Titres---*/
+h1{
   margin: 20px;
   border: 5px solid #800000;
-  color:blue;
+  color: var(--sa-title-color);
   font-style: italic;
   text-align: center;
-  font-size: 3em
+  font-size: 3em;
 }
 
 h2 {
@@ -21,20 +43,11 @@ h2 {
   padding: 5px;
   border: 5px solid #800000;
   border-radius: 10px;
-  color: blue;
+  color: var(--sa-title-color);
   width: auto;
 }
 
- /* Titre h2 modifié */
-#mesCompetences {
-  width: auto;
-}
-
-/* Présentation en haut de la page */
-div.presentation {
-  padding-bottom: 25px;
-}
-
+/*---Présentation---*/
 #maPhoto {
   float: right;
   height: 75px;
@@ -43,7 +56,7 @@ div.presentation {
 }
 
 div.presentation h4 {
-  color: #336699;
+  color: var(--sa-title-color);
   margin-left: 20px;
 }
 
@@ -54,26 +67,13 @@ div.icones img {
 }
 
 div.presentation p {
+  color: var(--sa-text-color);
   font-style: italic;
   margin-left: 25px;
 }
 
-div.grille {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: auto;
-  grid-template-areas : "gauche droite";
-}
 
-#gridArea1 {
-  grid-area: gauche;
-}
-
-#gridArea2 {
-  grid-area: droite;
-}
-
-/* Tableaux */
+/*---Tableaux---*/
 table, th, td {
   margin-left: 20px;
   border-collapse: collapse;
@@ -81,11 +81,17 @@ table, th, td {
 }
 
  th, td {
+   color: var(--sa-text-color);
    padding: 4px;
  }
 
  tr:nth-child(even) {
-  background-color: #D6EEEE;
+  background-color: var(--hf-bg-color);
+}
+
+td.date {
+  font-weight: bold;
+  color: var(--sa-text-color);
 }
 
 #table1 {
@@ -95,9 +101,15 @@ table, th, td {
 #table2 {
   width: auto;
   margin: 20px;
+  text-align: center;
 }
 
-/* Couleurs des langages HTML */
+
+/*---Couleurs des langages HTML---*/
+#texte_blanc{
+  color: var(--hf-text-color);
+}
+
  #html {
    color: #0044cc;
    text-align: center;
@@ -119,6 +131,7 @@ table, th, td {
  }
 
  #baseDeDonnee {
+   color: var(--hf-text-color);
    text-align: center;
  }
 
@@ -126,23 +139,23 @@ table, th, td {
    text-align: center;
  }
 
- div.centrerTableau td {
-   text-align: center;
- }
+/*---Listes---*/
+ol, ul{
+  color: var(--sa-text-color);
+}
 
- .date {
-   font-weight: bold;
-   color: #800080;
- }
+#loisirs {
+  margin: 25px;
+  padding: 0;
+}
 
- #loisirs li {
+ #loisirs li{
    display: inline;
-
  }
 
+/*---Footer--*/
 footer {
-  margin: 0 20px 20px 20px;
-  border: 5px solid #800000;
+  display: inline;
   border-radius: 10px;
   padding: 0 0 20px 18px;
   font-size: 3em;
@@ -151,18 +164,35 @@ footer {
 
  footer a {
    font-size: 1rem;
-   color: black;
+   color: var(--sa-text-color);
    text-align: center;
    font-variant: small-caps;
    text-decoration: none;
  }
 
  footer a:hover {
-   border-bottom: 2px solid black;
-   transition-delay: 0.2s;
+   border-bottom: 2px solid var(--sa-text-color);
+   transition-duration: 0.3s;
  }
 
- @media (max-width: 800px) {   /*Zone réservée pour les écrans inférieurs à 800px de large*/
+ /*---Grille pour mes formations et mes exp pro---*/
+ div.grille {
+   display: grid;
+   grid-template-columns: 50% 50%;
+   grid-template-rows: auto;
+   grid-template-areas : "gauche droite";
+ }
+
+ #gridArea1 {
+   grid-area: gauche;
+ }
+
+ #gridArea2 {
+   grid-area: droite;
+ }
+
+/*Zone réservée pour les écrans inférieurs à 800px de large*/
+ @media (max-width: 800px) {
    div.grille {
      display: grid;
      grid-template-columns: 100%;

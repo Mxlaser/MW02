@@ -11,13 +11,13 @@ function appuiButton()
   if(monBody.getAttribute("data-theme")=="light")
   {
     monBody.setAttribute("data-theme","dark");
-    darklight.innerText="Mode clair";
+    darklight.textContent="Mode clair";
   }
 
   else
   {
     monBody.setAttribute("data-theme","light");
-    darklight.innerText="Mode sombre";
+    darklight.textContent="Mode sombre";
   }
 }
 
@@ -33,12 +33,12 @@ let heure = date.getHours();
 if((heure > 7) && (heure < 19))
 {
   monBody.setAttribute("data-theme","light");
-  darklight.innerText="Mode sombre";
+  darklight.textContent="Mode sombre";
 }
 else
 {
   monBody.setAttribute("data-theme","dark");
-  darklight.innerText="Mode clair";
+  darklight.textContent="Mode clair";
 }
 
 //Fin gestion du mode sombre en fonction de l'heure-----------------------------
