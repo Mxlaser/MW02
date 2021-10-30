@@ -1,23 +1,23 @@
 //Début première fonction-------------------------------------------------------
 
 //---Variable affectée au bouton qui déclenche une fonction lors d'un clic
-let darklight = document.getElementById("dark_light").addEventListener("click", appuiButton);
+let darklight = document.getElementById("dark_light").addEventListener("click", AppuiButton);
 //---Variable affectée au body
 let monBody = document.getElementById("body");
 
 //---Fonction qui change le mode de la page (clair ou sombre)
-function appuiButton()
+function AppuiButton()
 {
-  if(monBody.getAttribute("data-theme")=="light")
+  if(monBody.getAttribute("data-theme") == "light")
   {
-    monBody.setAttribute("data-theme","dark");
-    darklight.textContent="Mode clair";
+    monBody.setAttribute("data-theme", "dark");
+    darklight.innerText = "Mode clair";
   }
 
   else
   {
-    monBody.setAttribute("data-theme","light");
-    darklight.textContent="Mode sombre";
+    monBody.setAttribute("data-theme", "light");
+    darklight.innerText = "Mode sombre";
   }
 }
 
@@ -32,13 +32,13 @@ let heure = date.getHours();
 
 if((heure > 7) && (heure < 19))
 {
-  monBody.setAttribute("data-theme","light");
-  darklight.textContent="Mode sombre";
+  monBody.setAttribute("data-theme", "light");
+  darklight.innerText = "Mode sombre";
 }
 else
 {
-  monBody.setAttribute("data-theme","dark");
-  darklight.textContent="Mode clair";
+  monBody.setAttribute("data-theme", "dark");
+  darklight.innerText = "Mode clair";
 }
 
 //Fin gestion du mode sombre en fonction de l'heure-----------------------------
