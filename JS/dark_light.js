@@ -1,7 +1,8 @@
 //Début première fonction-------------------------------------------------------
 
 //---Variable affectée au bouton qui déclenche une fonction lors d'un clic
-let darklight = document.getElementById("dark_light").addEventListener("click", AppuiButton);
+let darklight = document.getElementById("dark_light");
+darklight.addEventListener("click", AppuiButton);
 //---Variable affectée au body
 let monBody = document.getElementById("body");
 

@@ -181,6 +181,8 @@ aside a {
   border-radius: 10px;
   background-color: var(--n-bg-color);
   color: white;
+  font-size: 2em;
+  font-family: monospace;
 }
 
 /*---Footer---*/

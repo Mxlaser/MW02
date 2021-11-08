@@ -37,7 +37,7 @@ function VerifierMotDePasse()
   let mdp = document.getElementById("mdp1").value;
   let i = 0;
   let texte = "";
-  let carSpe = /^[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?`~]*$/
+  let carSpe = /^[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?`~]*$/;
   let nbMajuscules = 0;
   let nbMinuscules = 0;
   let nbChiffres = 0;
@@ -66,12 +66,13 @@ function VerifierMotDePasse()
     i++;
   }
 
-  /*
-  console.debug("Maj = " + nbMajuscules);
+
+  /*console.debug("Maj = " + nbMajuscules);
   console.debug("Min = " + nbMinuscules);
   console.debug("Chiffres = " + nbChiffres);
   console.debug("CarSpe = " + nbCarSpe);
   */
+
 
   //---Change span 8 caractères si au moins 8 caractères dans mdp
   if((mdp.length) >= 8 && document.getElementById("mdp_longueur").classList.contains("rouge"))
