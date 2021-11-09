@@ -167,6 +167,12 @@ aside {
     padding: 10px;
 }
 
+aside #debutStage {
+  font-size: 1.7em;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 aside a {
   font-size: 1rem;
   color: var(--sa-text-color);
